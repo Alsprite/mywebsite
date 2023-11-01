@@ -71,12 +71,6 @@ var dy = 4;
 var height = 30;
 var text = "DVD";
 var num = 1;
-
-var one = "blue";
-var two = "red";
-var three = "yellow";
-var four = "green";
-var five = "pink";
         
         function getRandomColor() {
             var letter = "0123456789ABCDEF";

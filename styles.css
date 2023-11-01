@@ -32,7 +32,7 @@ div.osio {
         margin: 0px 0px 0px;
         padding: 5px;
         position: relative;
-        background-image: url("media/peugeot.jpg");
+        background-image: url("media/tausta.png");
         background-repeat:no-repeat;
         background-size:cover;
         background-position: center;
@@ -169,8 +169,8 @@ div.osio {
         transition-duration: 0.4s;
     }
     #peliKuvat:hover {
-        width: 170px;
-        height: 170px;
+        width: 300px;
+        height: 300px;
         cursor: pointer;
         transition-duration: 0.4s;
     }
