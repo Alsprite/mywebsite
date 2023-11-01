@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../JSjutut/juurespeliKuvat/6.png" type="image/icon type">
+    <title>Sikanoppapeli</title>
+</head>
+<style>
+    h1 {
+    font-family: monospace;
+    color: white;
+    }
+    h2 {
+        font-family: monospace;
+        color: white;
+    }
+    h3 {
+        font-family: monospace;
+        color: white;
+    }
+    h4 {
+        font-family: monospace;
+        color: white;
+        display: inline-block;
+    }
+    body {
+        background-color: rgba(255, 115, 0, 0.8);
+    }
+    div.pelialue {
+        max-width: 450px;
+        height: 846px;
+        max-height: 100%;
+        background-color: rgba(0, 177, 255, 0.8);
+        border: solid white;
+        border-radius: 25px;
+        border-style: double;
+        border-width: 5px;
+        padding: 5px;
+    }
+    p {
+        font-family: monospace;
+        font-size: 24px;
+        color: white;
+        width: 200px;
+        height: 100%;
+        background-color: orange;
+        border: solid white;
+        border-radius: 8px;
+        cursor:pointer;
+    }
+    #saantobutton:hover {
+        background-color: red;  
+    }
+    #kaksibutton:hover {
+        background-color: blue;
+    }
+    .nappula2:hover {
+        background-color: blue;
+    }
+    #kolmebutton:hover {
+        background-color:green;
+    }
+    .nappula3:hover {
+        background-color: green;
+    }
+    .valintaNapit2:hover {
+        background-color: blue;
+    }
+    .valintaNapit3:hover {
+        background-color: green;
+    }
+    #napit {
+        font-family: monospace;
+        font-size: 24px;
+        color: white;
+        width: 20%;
+        height: 100%;
+        background-color: tomato;
+        border: solid white;
+        border-radius: 8px;
+        display: inline-block;
+        cursor:pointer;
+    }
+    td {
+        color: white;
+        font-family:'Franklin Gothic Medium';
+    }
+    .img2 {
+        cursor: pointer;
+        background-color: orange;
+        border: solid white;
+        border-radius: 0px;
+        border-style: solid;
+        border-width: 2px;
+        padding: 3px;
+        position: relative;
+    }
+    .img3 {
+        cursor: pointer;
+        background-color: orange;
+        border: solid white;
+        border-radius: 0px;
+        border-style: solid;
+        border-width: 2px;
+        padding: 3px;
+        position: relative;
+    }
+    .img2:hover {
+        background-color: blue;
+    }
+    .img3:hover {
+        background-color: green;
+    }
+    button {
+    background-color: gray;
+    color: white;
+    }
+    button:hover {
+        cursor: pointer;
+    }
+</style>
+<body>
+<center>
+    <a href="../index.html">
+        <button type="button">&#8592&#8592</button>
+    </a>
+    <a href="../pelit.html">
+        <button type="button">&#8592</button>
+    </a>
+    <div class="ylapalkki">
+        <h1 style="display: inline">Sikanoppapeli</h1>
+        <img src="juurespeliKuvat/possu.png" style="display: inline" width="32px" height="32px">
+    </div>
+        
+        <div class="pelialue">
+            <div class="laatikko1" id="laatikko1" style="display: block">
+                <h2>Tervetuloa sikanoppa-peliin!</h2>
+                <p class="nappula1" id="saantobutton" onclick="valikkoAani()">Pelin säännöt</p>
+                <div class="saannot" id="saannot" style="display: none">
+                <h3>1. Pelin tarkoitus on kerätä sata pistettä heittämällä noppaa tai noppia ja laskemalla heittojen summa yhteen.</h3>
+                <h3>2. Pelaaja heittää omalla vuorollaan noppaa niin pitkään, kunnes heittää ykkösen tai päättää lopettaa heittämisen.</h3>
+                <h3>3. Jos pelaaja heittää ykkösen, hänen vuoronsa loppuu ja sen kierroksen heittojen summa nollataan. Vuoro siirtyy seuraavalle pelaajalle. Jos pelaaja päättää lopettaa heittämisen ennen kuin hän heittää ykkösen, heittojen summa lasketaan yhteen ja lisätään edellisen kierroksen summaan. Tämän jälkeen vuoro siirtyy seuraavalle pelaajalle.</h3>
+                <h3>4. Sikaa voit pelata kahdella nopalla, jolloin säännöt muuttuvat hieman: Kun heität tuplat, saat tuplapisteet (esim. kaksi kolmosta on 12 pisteen arvoinen heitto) Kun heität kaksi ykköstä, saat 25 pistettä Kun heität vain toisella nopalla ykkösen, vuoro siirtyy seuraavalle pelaajalle etkä saa pisteitä Kun heität kolme tuplaa peräkkäin, vuoro siirtyy seuraavalle pelaajalle etkä saa pisteitä.</h3>
+            </div>
+            <p class="nappula2" id="kaksibutton" onclick="kaksiNimea(), valikkoAani()">Kaksi pelaajaa</p>
+            <div id="nimet2" style="display: none">
+                <form id="kokohomma1">
+                    <table>
+                        <tr>
+                            <td align="right">Pelaaja 1:n nimi: </td>
+                            <td align="left"><input type="text" id="user2.1" required></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Pelaaja 2:n nimi: </td>
+                            <td align="left"><input type="text" id="user2.2" required></td>
+                        </tr>
+                    </table>
+                </form>
+                <br>
+                    <img src="juurespeliKuvat/1.png" class="img2" onclick="kaksiPelaajaa(), validateKaksi(), aloitusAani(), yksiNoppa()" style="display: inline">
+                    <img src="juurespeliKuvat/2.png" class="img2" onclick="kaksiPelaajaa(), validateKaksi(), aloitusAani(), kaksiNoppa()" style="display: inline">
+            </div>
+            <p class="nappula3" id="kolmebutton" onclick="kolmeNimea(), valikkoAani()">Kolme pelaajaa</p>
+            <div id="nimet3" style="display: none">
+                <form id="kokohomma2">
+                    <table>
+                        <tr>
+                            <td align="right">Pelaaja 1:n nimi: </td>
+                            <td align="left"><input type="text" id="user3.1" required></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Pelaaja 2:n nimi: </td>
+                            <td align="left"><input type="text" id="user3.2" required></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Pelaaja 3:n nimi: </td>
+                            <td align="left"><input type="text" id="user3.3" required></td>
+                        </tr>
+                    </table>
+                </form>
+                <br>
+                    <img src="juurespeliKuvat/1.png" class="img3" onclick="kolmePelaajaa(), validateKolme(), aloitusAani(), yksiNoppa()" style="display: inline">
+                    <img src="juurespeliKuvat/2.png" class="img3" onclick="kolmePelaajaa(), validateKolme(), aloitusAani(), kaksiNoppa()" style="display: inline">
+            </div>
+            </div>
+            <div class="laatikko2" id="laatikko2" style="display: none">
+                <div class="voitto" id="voitto" style="display: none">
+                    <h1>Peli voitettu!</h1>
+                    <img src="juurespeliKuvat/thumbsup.png" width="100%" height="100%">
+                </div>
+                <div id="peliVuoro"><h2>Pelivuorossa: <span id="pelivuoro"></span></h2></div>
+                <div class="tilasto" id="tilasto" style="display: none">
+                    <div id="pelaaja1" style="display: none">
+                        <h3><span id="nimi1"></span> <span id="1pisteet">0</span> pistettä</h3>
+                    </div>
+                    <div id="pelaaja2" style="display: none">
+                        <h3><span id="nimi2"></span> <span id="2pisteet">0</span> pistettä</h3>
+                    </div>
+                    <div id="pelaaja3" style="display: none">
+                        <h3><span id="nimi3"></span> <span id="3pisteet">0</span> pistettä</h3>
+                    </div>    
+                    </div>
+                    <br>
+                    <div id="noppa1" style="display: none"><img id="slot1" src="juurespeliKuvat/0.png" height="128" width="128"></div>
+                    <div id="noppa2" style="display: none"><img id="slot2" src="juurespeliKuvat/0.png" height="128" width="128"></div>
+                    <br>
+                    <div class="peliNapit" id="heita" style="display:inline"><p id="napit" onclick="heita(), heittoAani()">Heitä</p></div>
+                    <div class="peliNapit" id="jaa" style="display:inline"><p id="napit" onclick="jaa()">Jää</p></div>
+                    <div id="tuplaDiv">
+                        <h2>Tuplia heitetty: <span id="tuplaMaara">0</span></h2>
+                    </div>
+                    <div id="pisteet"><h2>Pisteet nyt: <span id="pisteetNyt">0</span></h2></div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </center>
+</body>
+<script src="sikanoppapeli.js"></script>
+</html>

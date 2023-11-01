@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="fi">
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <link rel = "icon" href = "https://pbs.twimg.com/profile_images/1362534623314518019/_-WL5fV6_400x400.png" type = "image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Henri Mykrä TiVi21A</title>
+</head>
+<body>
+    <a href="https://google.fi">
+        <button type="button">Poistu</button>
+    </a>
+    <a href="JSjutut/canvas.html">
+        <button type="button">DVD</button>
+    </a>
+    <br>
+    <h7>Kannattaa jo hyvissä ajoin poistua.</h7>
+  
+    <div class="cookie" style="display: block">
+        <h1>Emme arvosta yksityisyyttäsi.</h1>
+        <button onclick="cookies()" style="width: 200px; height: 40px">Ymmärrän, ja haluan jatkaa</button>
+    </div>
+<div class="osio" style="display: none">
+    <h1>Tervetuloa sivulleni!</h1>
+    <p>Muille sivuille pääsee kuvia klikkaamalla.</p>
+    
+    <div class="child">
+        <h2>Kuka olen?</h2>
+        <a href="kukaolen.html">
+            <img src="media/kukaolen.png" width="160" height="160" id="menukuvat">
+        </a>
+    </div>
+    <div class="child">
+        <h2>Työnäytteet?</h2>
+        <a href="tyonaytteet.html">
+            <img src="media/keksi.png" width="160" height="160" id="menukuvat">
+        </a>
+    </div>
+    <div class="child">
+        <h2>Some?</h2>
+            <img src="media/facebook.png" width="160" height="160" id="menukuvat">
+    </div>
+</div>
+@Henri Mykrä TiVi21A
+</body>
+<script>
+    function cookies() {
+        document.querySelector(".cookie").style.display = "none";
+        document.querySelector(".osio").style.display = "block"
+    }
+</script>
+</html>

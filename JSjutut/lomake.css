@@ -1,0 +1,13 @@
+body {
+    background-image: url("../media/tausta.png");
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+button {
+    background-color: gray;
+    color: white;
+}
+button:hover {
+    cursor: pointer;
+}

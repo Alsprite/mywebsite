@@ -1,0 +1,7 @@
+Työnjako:
+Tatu - 
+Niilo - 
+Henri - 
+
+25.8.
+Tyylimuutoksia html-puoleen ja ääniefektin lisäys.

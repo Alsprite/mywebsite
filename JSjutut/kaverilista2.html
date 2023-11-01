@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../media/js/kaverilista2.jpg" type="image/icon type">
+  <title>Kaverilista 2</title>
+</head>
+<body>
+  <style>
+    body {
+        background-image: url("../media/tausta.png");
+        background-size: cover;
+        background-attachment: fixed;
+        color: white;
+    }
+      ul {
+          list-style-type: none;
+      }
+      .button {
+    background-color: gray;
+    color: white;
+    }
+    .button:hover {
+      cursor: pointer;
+    }
+  </style>
+  <div>
+    <a href="../index.html">
+      <button type="button" class="button">&#8592&#8592</button>
+  </a>
+  <a href="../sovellukset.html">
+  <button type="button" class="button">&#8592</button>
+  </a>
+      <h1>Kaverilista</h1>
+      <p>Syötä nimi:</p>
+      <input type="text">
+      <button id="lisays">Lisää kaveri</button>
+      <button id="poisto">Poista kaveri</button>
+      <button id="jarjesta">Järjestä kaverit</button>
+      <ul></ul>    
+  </div>
+  <script src="kaverilista2.js"></script>
+</body>
+</html>

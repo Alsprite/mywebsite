@@ -1,0 +1,187 @@
+div.child {
+    display: inline-block;
+}
+div.osio {
+        border: solid cyan;
+        border-radius: 25px;
+        border-style: double;
+        border-width: 5px;
+        background-color: rgba(0, 0, 0, 0.25);
+    }
+    div.tyohistoria {
+        width: auto;
+        height: auto;
+        border: solid cyan;
+        border-radius: 25px;
+        border-style: double;
+        border-width: 5px;
+        margin: 0px 0px 0px;
+        padding: 5px;
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.3);
+        background-repeat:no-repeat;
+        background-size:cover;
+        background-position: center;
+    }
+    div.harrastukseni {
+        width: auto;
+        border: solid cyan;
+        border-radius: 25px;
+        border-style: double;
+        border-width: 5px;
+        margin: 0px 0px 0px;
+        padding: 5px;
+        position: relative;
+        background-image: url("media/peugeot.jpg");
+        background-repeat:no-repeat;
+        background-size:cover;
+        background-position: center;
+    }
+    div.kukaolen {
+        width: 60%;
+        border: solid cyan;
+        border-radius: 25px;
+        border-style: double;
+        border-width: 5px;
+        margin: 0px 0px 0px;
+        padding: 5px;
+        background-image: url("media/tausta.png");
+        background-position: center;
+        text-align: center;
+    }
+    div.video {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
+        width: 100%;
+    }
+    div.tyonaytteet {
+        border: solid cyan;
+        border-radius: 25px;
+        border-style: double;
+        border-width: 5px;
+        background-color: rgba(0, 0, 0, 0.25);
+        text-align: center;
+    }
+    div.sovellukset {
+        border: solid cyan;
+        border-radius: 25px;
+        border-style: double;
+        border-width: 5px;
+        background-color: rgba(0, 0, 0, 0.25);
+        text-align: center;
+    }
+    div.pelit {
+        border: solid cyan;
+        border-radius: 25px;
+        border-style: double;
+        border-width: 5px;
+        background-color: rgba(0, 0, 0, 0.25);
+        text-align: center;
+    }
+    ul {
+        text-align: center;
+    }
+    li {
+        text-align: center;
+    }
+    body {
+        background-image: url("media/tausta.png");
+        background-size: cover;
+        background-attachment: fixed;
+        color: white;
+        text-align: center;
+    }
+    hr {
+        color: white;
+	    align-items: center;
+	    border: 2px solid white;
+	    width: 30%;
+	    position: relative;
+	    margin-bottom: 20px;
+	    opacity: 1;
+    }
+    p { 
+        font-family: 'Lucida Console', monospace;
+        text-align: center;
+        color: white;
+    }
+    h1 {
+        font-family: Helvetica, sans-serif;
+        text-align: center;
+        color: white;
+    }
+    h2 {
+        font-family: Helvetica, sans-serif;
+        text-align: center;
+        color: white;
+    }
+    h3 {
+            font-family: Helvetica, sans-serif;
+            text-align: center;
+            color: white;
+    }
+    h7 {
+        font-family: sans-serif;
+    }
+    a {
+        color: lightcyan;
+    }
+    a:hover {
+        color: lightblue;
+    }
+    select {
+        text-align: center;
+    }
+    button {
+        width: 56px;
+        height: 25px;
+        background-color: gray;
+        color: white;
+        border-radius: 1000px;
+    }
+    button:hover {
+        width: 58px;
+        height: 27px;
+        cursor: pointer;
+        transition-duration: 0.4s;
+    }
+    .BSjutut {
+        width: 280px;
+        height: 25px;
+    }
+    .BSjutut:hover {
+        width: 290px;
+        height: 30px;
+        transition-duration: 0.4s;
+    }
+    #menukuvat:hover {
+        width: 170px;
+        height: 170px;
+        cursor: pointer;
+        transition-duration: 0.4s;
+    }
+    #sovellusKuvat:hover {
+        width: 170px;
+        height: 170px;
+        cursor: pointer;
+        transition-duration: 0.4s;
+    }
+    #peliKuvat:hover {
+        width: 170px;
+        height: 170px;
+        cursor: pointer;
+        transition-duration: 0.4s;
+    }
+    .cookie {
+        margin: auto;
+        width: 300px;
+        height: 150px;
+        border: solid cyan;
+        border-radius: 25px;
+        border-style: double;
+        border-width: 5px;
+        padding: 10px;
+        background-color: black;
+    }

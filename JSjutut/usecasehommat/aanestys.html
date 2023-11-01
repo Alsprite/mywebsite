@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head lang="fi">
+    <meta charset="UTF-8">
+    <link rel = "icon" href = "https://pbs.twimg.com/profile_images/1362534623314518019/_-WL5fV6_400x400.png" type = "image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Äänestyssovellus</title>
+</head>
+<body onload="getVotes(), resettaus()">
+    <style>
+        body {
+            background-image: url(tausta.jpg);
+        }
+        .kirjautuminen {
+            display: inline-flex;
+        }
+        #kirjautuminen {
+            display: inline-flex;
+        }
+        .ylapalkki {
+            width: 100%;
+            display: inline-block;
+            border-bottom: 2px solid white;
+        }
+        .aanestysH1 {
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: white;
+        }
+        .mihinluodaanaanestykset {
+            max-width: 15%;
+            width: 15%;
+            height: 100%;
+            background-color: gray;
+            border: 2px solid white;
+            margin-top: 5px;
+        }
+        h1 {
+            margin-left: 39px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: white;
+        }
+        h2 {
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: white;
+        }
+        h3 {
+            color: white;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #aanetDivi {
+            display: inline;
+        }
+        h4 {
+            display: inline;
+            font-family: 'Segoe UI';
+        }
+        span {
+            display: inline;
+            font-family:'Segoe UI';
+        }
+        .aanestys {
+            max-width: 2%;
+            background-color: gray;
+            display: inline;
+        }
+        #uusi {
+            width: 250px;
+            background-color: grey;
+        }
+        .poisto {
+            display: block;
+            background-color: purple;
+        }
+        .aanestysEmpty {
+            display: none;
+        }
+        .aanestysFull {
+            display: block;
+        }
+        ul {
+            color: white;
+        }
+        li {
+            text-align: left;
+            display: block;
+            color: white;
+        }
+        #aanestysNappulat {
+            display: inline;
+        }
+        button {
+            background-color: purple;
+            color: white;
+            border: 5px solid purple;
+        }
+        #text {
+            color: black;
+        }
+        button:hover {
+            cursor: pointer;
+        }
+    </style>
+</body>
+<center>
+    <a href="../../index.html">
+        <button type="button" class="button">&#8592&#8592</button>
+    </a>
+    <a href="../../tyonaytteet.html">
+        <button type="button" class="button">&#8592</button>
+    </a>
+<div class="ylapalkki">
+    <h1 class="aanestysH1">Äänestyssovellus</h1>
+   
+    <div class="kirjautuminen" id="kirjautuminen">
+            <input type="text" id="ID" placeholder="KäyttäjäID" style="width: 100px">
+            <input type="text" id="salasana" placeholder="Salasana" style="width: 100px">
+            <button type="button" placeholder="Kirjaudu" onclick="kirjaudu()">Kirjaudu</button>
+        </div>
+    <div id="ylaNappulat" style="display: none">
+        <button type="button" onclick="kirjauduUlos()">Kirjaudu ulos</button>
+        <div id="adminNappulat">
+            <!-- <button type="button" onclick="delVote()">Poista äänestys</button> -->
+            <button type="button" onclick="uusiAanestysDiv()">Uusi äänestys</button>
+        </div>
+    </div>
+</div>
+</center>
+<div id="kokonaisuus">
+    
+</div>
+
+<center>
+<div id="uusi" style="display: none">
+        <button type="button" onclick="suljeDiv()">Sulje</button>
+        <br>
+        <input type="text" id="nimi" placeholder="Nimi">
+        <br>
+        <input type="text" id="vastaus1" placeholder="Vastaus 1">
+        <br>
+        <input type="text" id="vastaus2" placeholder="Vastaus 2">
+        <br>
+        <button type="button" onclick="init(), getVotes()">Luo uusi</button>
+    </div>
+<!-- <div id="poistaDiv" style="display: none">
+    <button type="button" onclick="suljeDiv()">Sulje</button>
+    <h3>Mikä poistetaan?</h3>
+    <br>
+    <input type="text" id="poistettava" placeholder="Äänestyksen nimi">
+    <br>
+    <button type="button" onclick="delVote()">Poista</button>
+</div> -->
+</center>
+<script src="aanestys.js"></script>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <link rel="stylesheet" href="lomake.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../media/js/lomake.jpg" type="image/icon type">
+  <title>Rekisteröitymislomake</title>
+</head>
+<body>
+    <a href="../index.html">
+        <button type="button">&#8592&#8592</button>
+    </a>
+    <a href="../sovellukset.html">
+        <button type="button">&#8592</button>
+    </a>
+      <h1>Rekisteröitymislomake</h1>
+      <p>Siirry kentästä toiseen tab-näppäimellä.</p>
+      <ul>
+          <li>Kaikki kentät paitsi Lisätietoja ovat pakollisia</li>
+          <li>Käyttäjä ID pitää olla vähintään 6 merkkiä pitkä</li>
+          <li>Postinumerossa pitää olla 5 numeroa</li>
+          <li>Sähköpostiosoitteen tulee olla sähköpostiosoitteen muotoinen</li>
+      </ul>
+      
+    <form id="kokohomma" name="kayttajaID" onsubmit="return validateForm()">
+        <table>
+            <tr>
+                <td align="right">Käyttäjä ID:</td>
+                <td align="left"><input type="text" name="userID" required></td>
+            </tr>
+            <tr>
+                <td align="right">Salasana:</td>
+                <td align="left"><input type="text" name="salasana" required></td>
+            </tr>
+            <tr>
+                <td align="right">Nimi:</td>
+                <td align="left"><input type="text" name="nimi" required></td>
+            </tr>
+            <tr>
+                <td align="right">Osoite:</td>
+                <td align="left"><input type="text" name="osoite" required></td>
+            </tr>
+            <tr>
+                <td align="right">Maa:</td>
+                <td align="left"><select name="select" id="select">
+            <option value="eivalittu" id="eivalittu">(Valitse maa)</option>
+            <option value="suomi" id="suomi">Suomi</option>
+            <option value="ruotsi" id="ruotsi">Ruotsi</option>
+            <option value="muu" id="muu">Muu</option></select></td>
+            </tr>
+            <tr>
+                <td align="right">Postinumero:</td>
+                <td align="left"><input type="number" name="postinumero" id="postinumero" required></td>
+            </tr>
+            <tr>
+                <td align="right">Sähköposti:</td>
+                <td align="left"><input type="text" name="sahkoposti" required></td>
+            </tr>
+            <tr>
+                <td align="right">Sukupuoli:</td>
+                <td align="left"><input type="radio" name="sukupuoli" id="sukupuoli" value="mies"><label for="mies" required>Mies</label></input></td>
+                <td align="left"><input type="radio" name="sukupuoli" id="sukupuoli" value="nainen"><label for="nainen" required>Nainen</label></input></td>
+            </tr>
+            <tr>
+                <td align="right">Kieli:</td>
+                <td align="left"><input type="radio" name="kieli" id="kieli" value="suomea"><label for="suomea" required>Suomi</label></input></td>
+                <td align="left"><input type="radio" name="kieli" id="kieli" value="muukieli"><label for="muukieli" required>Muu kuin suomi</label></input></td>
+            </tr>
+            <tr>
+                <td align="right">Lisätietoja:</td>
+                <td align="left"><textarea id="lisatietoja" rows="6" cols="21"></textarea></td>
+            </tr>
+            
+            
+        </table>
+    </form>
+    <form id="submit">
+        <input type="submit" value="Lähetä"></input>
+    </form>
+
+  <script src="lomake.js"></script>
+</body>
+</html>

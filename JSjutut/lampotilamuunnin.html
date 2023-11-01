@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <link rel="stylesheet" href="../styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../media/js/muunnin.jpg" type="image/icon type">
+  <title>Lämpötilamuunnin</title>
+</head>
+<body>
+    <style>
+        ul {
+            list-style-type: decimal;
+    }
+    button:hover {
+      cursor: pointer;
+    }
+    </style>
+    
+  <div>
+    <center>
+    <a href="../index.html">
+      <button type="button">&#8592&#8592</button>
+  </a>
+  <a href="../sovellukset.html">
+    <button type="button">&#8592</button>
+</a>
+      <h1>Lämpötilamuunnin</h1>
+      
+      <select name="muunnin" id="select">
+      <option value="cTOf" id="cTOf">Celsius - Fahrenheit</option>
+      <option value="fTOc" id="fTOc">Fahrenheit - Celsius</option>
+      <option value="cTOk" id="cTOk">Celsius - Kelvin</option>
+      <option value="kTOc" id="kTOc">Kelvin - Celsius</option>
+      </select>
+      </center>
+      
+      <p>Syötä lämpötila:</p>
+
+<p>
+  <input id="inputFahrenheit" type="number" placeholder="Muutettava lämpötila" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+</p>
+<p>Tulos: <span id="outputFahrenheit"></span></p>
+
+<script src="lampotilamuunnin.js"></script>
+
+</body>
+</html>
+
+</body>
+</html>
